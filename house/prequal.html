@@ -1,0 +1,142 @@
+<HTML>
+<HEAD>
+<TITLE>Loan Pre-Qualifier</TITLE>
+<script language=Javascript>
+
+function testvalues(value)
+
+   {
+    TestVar = isNumberString (value);
+    if (TestVar == 1)
+     {}
+    else
+     {
+      alert ("Either your entries contain non-number characters or you have not completely filled out the form. Please re-enter your numbers.");
+      return(TestVar);
+     }
+   }
+
+function isNumberString (InString)  
+   {
+        if(InString.length==0) return (false);
+        var RefString="1234567890.-";
+        for (Count=0; Count < InString.length; Count++)  
+            {
+                TempChar= InString.substring (Count, Count+1);
+                if (RefString.indexOf (TempChar, 0)==-1) 
+                        return (false);
+             }
+        return (true);
+    }
+
+
+function checkvalues(g_income,m_debt)
+ {
+  proceed=testvalues(g_income) ; 
+   if (proceed==0)
+      {return;}
+
+  proceed=testvalues(m_debt) ; 
+   if (proceed==0)
+      {return;}
+  
+   if (g_income<=0) 
+    {
+      alert ("Sorry, our loan pre-qualifier will only accept income values greater than $0");
+      return;
+    }
+    else 
+       {
+         if (m_debt<0) 
+          {
+            alert ("Sorry, our loan pre-qualifier will only accept monthly debt values greater than or equal to $0");
+            return;
+           }
+         else
+           {
+            calc_monthly_payment(g_income,m_debt);
+            }
+       }
+ }
+
+
+function calc_monthly_payment(g_income,m_debt)
+   {
+      monthly_housing_expense1=g_income*.28;
+      total_monthly_debt_limit=g_income*.36;
+      
+      monthly_housing_expense2 = total_monthly_debt_limit - m_debt;
+
+      if (monthly_housing_expense1<monthly_housing_expense2)
+          {
+             monthly_payment=monthly_housing_expense1;
+          }
+      else
+          {
+            monthly_payment=monthly_housing_expense2;
+          }     
+  
+      monthly_payment=monthly_payment*100;
+      monthly_payment=Math.round(monthly_payment);
+      monthly_payment=monthly_payment/100;
+
+      document.form1.m_pay.value=monthly_payment;
+      document.form1.m_pay.focus();
+    }
+
+
+</script>
+</HEAD>
+<BODY BGCOLOR="FFFFFF" LINK="3F6F60" Vlink="30306F" >
+<font face="Georgia" size=2>
+
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr align=right>
+<td height=55 valign=top>
+<img src="images/morttitl.gif" border=0 width=374 height=45>
+</td>
+</tr>
+
+<tr align=right>
+<td height=55 valign=top>
+<img src="images/mortsub2.gif" border=0 width=226 height=28>
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+To determine whether or not you might be eligible to obtain a specified amount for a home loan, enter the appropriate information into the areas below and click on the Calculate button.<P>
+
+<FORM name=form1>
+
+Gross Monthly Income:(#s only, no commas)<br>
+&#36<INPUT type=text name=gross_income size=6><p>
+
+Current Monthly Debts:(#s only, no commas)<br>
+&#36<INPUT type=text name=monthy_debt size=6><p>
+
+<INPUT type=button name=button1 value=Calculate
+onClick="checkvalues(document.form1.gross_income.value,document.form1.monthy_debt.value)"><p>
+
+<h4><font color="3F6F60">Results</font></h4><p>
+
+Your maximum acceptable monthly payment is:<br>&#36 <INPUT type=text name=m_pay size=7>  <p>
+
+
+
+
+
+<a href="loans.html"><font size=3>Tell Me More About Loans</font></a><p>
+
+
+
+</font>
+</BODY>
+</HTML>
+
+

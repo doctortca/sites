@@ -1,0 +1,184 @@
+<HTML>
+<HEAD>
+<TITLE>Mortgage Calculator</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+
+ 
+
+
+function testvalues(value)
+
+   {
+        TestVar = isNumberString (value);
+        if (TestVar == 1)
+                {}
+        else
+              {alert ("Either your entries contain non-number characters or you have not completely filled out the form. Please re-enter your numbers.");
+              return(TestVar);
+              }
+   }
+
+function isNumberString (InString)  
+   {
+        if(InString.length==0) return (false);
+        var RefString="1234567890.-";
+        for (Count=0; Count < InString.length; Count++)  
+            {
+                TempChar= InString.substring (Count, Count+1);
+                if (RefString.indexOf (TempChar, 0)==-1) 
+                        return (false);
+             }
+        return (true);
+    }
+
+
+
+
+function checkvalues(l_amnt,annual_rt,t_years)
+ {
+  
+   
+   proceed=testvalues(l_amnt) ; 
+   if (proceed==0)
+      {return;}
+
+  proceed=testvalues(annual_rt) ; 
+   if (proceed==0)
+      {return;}
+
+  proceed=testvalues(t_years) ; 
+   if (proceed==0)
+      {return;}
+
+   if ((l_amnt<0) || (l_amnt>500000)) 
+    {
+      alert ("Sorry, our mortgage calculator will only accept between $0 and $500,000 as acceptable loan amounts.");
+      return;
+    }
+    else 
+       {
+         if ((annual_rt<=0) || (annual_rt>20.0)) 
+          {
+            alert ("Sorry, our mortgage calculator will only accept annual interest rates greater than 0 and no greater than 20 percent.");
+            return;
+           }
+         else
+           {
+              if ((t_years<1) || (t_years>30)) 
+                {
+                   alert ("Sorry, our mortgage calculator will only allow you to specify 1 to 30 years to repay your loan.");
+                   return;
+                 }
+              else
+                 {
+                   calc_monthly_payment(l_amnt,annual_rt,t_years);
+                 }
+            }
+       }
+      
+ }
+
+function calc_monthly_payment(l_amnt,annual_rt,t_years)
+ {
+    
+    decimal=annual_rt * 0.01;   
+    m_rate=decimal/12; 
+    t_payments=t_years*12;
+    var1=1+m_rate;
+    sum1=Math.pow(var1,t_payments)
+   
+    m_payment=l_amnt*m_rate/(1-(1/sum1));
+    m_payment=m_payment*100;
+    m_payment=Math.round(m_payment);
+    m_payment=m_payment/100;
+    total_payment=t_payments*m_payment;
+    total_payment=Math.round(total_payment);
+    total_interest=total_payment-l_amnt;
+    total_interest=Math.round(total_interest);
+
+     
+    document.form1.m_pay.value=m_payment;
+    document.form1.t_pay.value=total_payment;
+    document.form1.i_pay.value=total_interest;
+    document.form1.m_pay.focus();
+ }
+
+
+
+
+
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="FFFFFF" LINK="3F6F60" Vlink="30306F" >
+<font face="Georgia" size=2>
+
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr align=right>
+<td height=55 valign=top>
+<img src="images/morttitl.gif" border=0 width=374 height=45>
+</td>
+</tr>
+
+<tr align=right>
+<td height=55 valign=top>
+<img src="images/mortsub.gif" border=0 width=405 height=34>
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+To calculate your monthy payment for a specific home loan amount, enter the appropriate information into the areas below and click on the Calculate button.<P>
+
+<FORM name=form1>
+Total price of home: (#s only, no commas):<br>&#36<INPUT type=text name=loan_amount size=8 ><p>
+
+Annual interest rate:<br><INPUT type=text name=annual_interest_rate size=4>&#37<p>
+
+Number of years:<br><INPUT type=text name=years size=4> years <p>
+
+<INPUT type=button name=button1 value=Calculate
+onClick="checkvalues(document.form1.loan_amount.value,document.form1.annual_interest_rate.value,document.form1.years.value)"><p>
+
+<h4><font color="3F6F60">Results</font></h4><p>
+
+Monthly Payment:<br>&#36 <INPUT type=text name=m_pay size=7>  <p>
+
+Your total payment will be:<br>&#36 <INPUT type=text name=t_pay size=7><p>
+   
+Your interest paid will be:<br>&#36 <INPUT type=text name=i_pay size=7><p>
+
+    
+
+
+    
+
+
+
+
+</FORM>
+
+
+
+
+
+
+
+
+
+
+<a href="prequal.html"><font size=3>Can I Qualify?</font></a>
+
+
+
+
+</font>
+</BODY>
+</HTML>
+
+

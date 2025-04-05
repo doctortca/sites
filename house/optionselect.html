@@ -1,0 +1,223 @@
+<HTML>
+<HEAD>
+<TITLE>Option Selection</TITLE>
+<script language="JavaScript">
+
+
+
+
+
+function calc_price(form)
+   {
+   the_index=form.Floor_Plan.selectedIndex;
+   Floor_Plan_Value=form.Floor_Plan[the_index].value;
+   Floor_Plan_Value=Floor_Plan_Value*1;
+ 
+   if (form.Full_Sod.checked)
+      {Sod_Value=form.Full_Sod.value;}
+   else
+      {Sod_Value=0;}
+   Sod_Value=Sod_Value*1;
+
+   if (form.Brick_Patio.checked)
+      {Brick_Patio_Value=form.Brick_Patio.value;}
+   else
+      {Brick_Patio_Value=0;}
+    Brick_Patio_Value=Brick_Patio_Value*1;
+
+   if (form.Sprinkler_System.checked)
+      {Sprinkler_System_Value=form.Sprinkler_System.value;}
+   else
+      {Sprinkler_System_Value=0;}
+   Sprinkler_System_Value=Sprinkler_System_Value*1;
+
+   if (form.Divided_Light.checked)
+      {Divided_Light_Value=form.Divided_Light.value;}
+   else
+      {Divided_Light_Value=0;}
+   Divided_Light_Value=Divided_Light_Value*1;
+
+   the_index=form.Flooring_Living.selectedIndex;
+   Flooring_Living_Value=form.Flooring_Living[the_index].value;
+   Flooring_Living_Value=Flooring_Living_Value*1; 
+
+   if (form.Hand_Crafted_Fireplace.checked)
+      {Hand_Crafted_Fireplace_Value=form.Hand_Crafted_Fireplace.value;}
+   else
+      {Hand_Crafted_Fireplace_Value=0;}
+   Hand_Crafted_Fireplace_Value=Hand_Crafted_Fireplace_Value*1;
+
+   if (form.Surround_Sound.checked)
+      {Surround_Sound_Value=form.Surround_Sound.value;}
+   else
+      {Surround_Sound_Value=0;}
+   Surround_Sound_Value=Surround_Sound_Value*1;
+
+
+   the_index=form.Additional_Phone_Lines.selectedIndex;
+   Additional_Phone_Lines_Value=form.Additional_Phone_Lines[the_index].value;
+   Additional_Phone_Lines_Value=Additional_Phone_Lines_Value*1; 
+    
+   the_index=form.Flooring_Kitchen_Bath.selectedIndex;
+   Flooring_Kitchen_Bath_Value=form.Flooring_Kitchen_Bath[the_index].value;
+   Flooring_Kitchen_Bath_Value=Flooring_Kitchen_Bath_Value*1; 
+
+   if (form.Full_Wallpaper.checked)
+      {Full_Wallpaper_Value=form.Full_Wallpaper.value;}
+   else
+      {Full_Wallpaper_Value=0;}
+   Full_Wallpaper_Value=Full_Wallpaper_Value*1;
+
+   if (form.Designer_Fixtures.checked)
+      {Designer_Fixtures_Value=form.Designer_Fixtures.value;}
+   else
+      {Designer_Fixtures_Value=0;}
+   Designer_Fixtures_Value=Designer_Fixtures_Value*1;
+
+   if (form.Tiled_Backsplash.checked)
+      {Tiled_Backsplash_Value=form.Tiled_Backsplash.value;}
+   else
+      {Tiled_Backsplash_Value=0;}
+   Tiled_Backsplash_Value=Tiled_Backsplash_Value*1;
+
+   if (form.Hand_Crafted_Cabinets.checked)
+      {Hand_Crafted_Cabinets_Value=form.Hand_Crafted_Cabinets.value;}
+   else
+      {Hand_Crafted_Cabinets_Value=0;}
+   Hand_Crafted_Cabinets_Value=Hand_Crafted_Cabinets_Value*1;
+
+   total_price=Floor_Plan_Value + Sod_Value + Brick_Patio_Value + Sprinkler_System_Value + Divided_Light_Value + Flooring_Living_Value + Hand_Crafted_Fireplace_Value + Surround_Sound_Value + Additional_Phone_Lines_Value + Flooring_Kitchen_Bath_Value + Full_Wallpaper_Value + Designer_Fixtures_Value + Tiled_Backsplash_Value + Hand_Crafted_Cabinets_Value;
+
+   form.output_box.value=total_price;
+   form.output_box.focus();
+
+   return(total_price);
+   
+
+   }
+
+
+   
+
+
+
+</script>
+</HEAD>
+<BODY BGCOLOR="FFFFFF" LINK="3F6F60" Vlink="30306F" >
+<font face="Georgia" size=2>
+
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr align=right>
+<td height=55 valign=top>
+<img src="images/planstitl.gif" border=0 width=275 height=40>
+</td>
+</tr>
+
+<tr align=right>
+<td height=55 valign=top>
+<img src="images/planssub3.gif" border=0 width=270 height=28>
+</td>
+</tr>
+</table>
+
+Select the desired options below for your new home and click on the Calculate Price button for a price and summary of your choices.<P>
+
+<form name="form1">
+
+Floor Plan:
+<select name="Floor_Plan" size=1>
+<option value=165000>Legacy
+<option value=175000>Tennyson
+<option value=180000>Stonebriar
+<option value=180000>Windhaven
+<option value=185000>Parkwood
+</select>
+<p>
+
+<hr>
+
+
+<b>Exterior Options</b><p>
+<input type="checkbox" name="Full_Sod" value=800> Full sod in all yards
+<p>
+<input type="checkbox" name="Brick_Patio" value=850> Brick patio
+<p>
+<input type="checkbox" name="Sprinkler_System" value=2300> Sprinkler system
+<p>
+<input type="checkbox" name="Divided_Light" value=300> Divided light windows throughout home
+<p>
+
+
+<hr>
+<b>Living and Bedroom Options</b><p>
+Flooring:
+<select name="Flooring_Living">
+<option selected value=0>Standard Carpet (default)
+<option value=3000>Berber or upgraded carpet
+<option value=3500>Hardwood
+<option value=3500>Ceramic tile
+</select>
+<p>
+
+<input type="checkbox" name="Hand_Crafted_Fireplace" value=700> 42 &quot fireplace with 3-piece custom hand-crafted and painted or stained mantle
+<p>
+
+<input type="checkbox" name="Surround_Sound" value=2000> Surround Sound speaker system in living area
+<p>
+
+Additional Phone lines installed? <br>
+Select number: 
+<select name="Additional_Phone_Lines" size=1>
+<option value=0>
+<option value=50>1
+<option value=100>2
+<option value=150>3
+</select>
+<p>
+
+
+
+
+<hr>
+<b>Kitchen & Bath Options</b><p>
+Flooring:
+<select name="Flooring_Kitchen_Bath">
+<option selected value=0>Vinyl (default)
+<option value=2500>Hardwood
+<option value=2500>Ceramic tile
+</select>
+<p>
+
+<input type="checkbox" name="Full_Wallpaper" value=400> Full wallpaper
+<p>
+
+<input type="checkbox" name="Designer_Fixtures" value=600> Designer gold and chrome fixtures
+<p>
+
+<input type="checkbox" name="Tiled_Backsplash" value=400> Tiled backsplash
+<p>
+
+<input type="checkbox" name="Hand_Crafted_Cabinets" value=350> 42 &quot hand-crafted wood stained cabinets in kitchen
+<p>
+
+
+
+<INPUT type=button name=button1 value="Calculate Price"
+onClick="calc_price(this.form)"><p>
+
+
+<h4><font color="3F6F60">Results</font></h4><p>
+
+Total Cost:<br>&#36 <INPUT type=text name=output_box size=9 value="">  <p>
+
+<a href="mortcalc.html"><font size=3>What would my monthly payment be for this home?</font></a><p>
+
+
+</form>
+
+
+</font>
+</BODY>
+</HTML>
+
+
