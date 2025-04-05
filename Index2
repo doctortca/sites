@@ -53,27 +53,65 @@ function MM_swapImage() { //v3.0
     <td width="95" align="left" valign="top"><img src="images/leftcorner.gif" width="89" height="84" align="top"></td>
     <td width="724" valign="top" bgcolor="#666666" background="images/light.gif" tile="no" height="*"> 
       <p>&nbsp;</p>
-      <p><font face="Verdana, Arial, Helvetica, sans-serif">Welcome to my interactive 
-        playground. Feel free to explore.</font></p>
-      <p>&nbsp;</p>
-      <p><font face="Verdana, Arial, Helvetica, sans-serif">This site contains 
-        a variety of media and content. All exemplify creative/conceptual ability 
-        and technical skills. You'll find examples of instructional & information 
-        design, multimedia & Web authoring, graphic design, and programming.</font></p>
-      <p>&nbsp;</p>
-      <p><font face="Verdana, Arial, Helvetica, sans-serif">Always striving to 
-        improve and further my skills & knowledge, I appreciate others' input 
-        on my work. I welcome your thoughts and suggestions.</font></p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
+    
+   
+<h1>Web Authoring Examples</h1>
+
+ <p>The following are various work samples of web design and coding skills. Some were created by using web authoring applications, and some were coded from scratch. All have hand-edited custom code. </p>
+
+
+  <h4> Web Sites </h4>
+   
+ 
+ <h5> Coded by hand, from scratch in HTML and Javascript </h5>
+   <ul>
+ 
+<li>
+
+<p><a href="https://doctortca.github.io/sites/house/index.html"> Custom Home Builders </a>  </p>
+
+
+ 
+   </ul>
+ 
+    <h5> Designed in FrontPage and Dreamweaver </h5>
+   
+<ul>
+ 
+<li>
+<p><a href="https://doctortca.github.io/sites/Prod_dev/proddev.htm"> Instructional Design Library </a>  </p>
+
+
+</li>
+
+   </ul>
+    <h4> Web Based Training <h4>
+     
+    <h5>Designed in FrontPage </h5>
+   
+   <p> The following courses will open in pop-up windows.  <b>NOTE: </b> They have embedded videos, which were housed on a secure server not accessible to the public, so they won't play. You'll just see a placeholder for that part of each course.</p>
+ <ul>
+ <li>
+          <a href="javascript:popUpA()"> EmergencyClick </a>  
+</li>
+<li>
+          <p><a href="javascript:popUpB()"> OfficerNet </a>  </p>
+</li>
+   </ul>
+  <h5> Designed in Dreamweaver </h5>
+<ul>
+ <li>
+          <p><a href="javascript:popUpC()"> MedPrime </a>  </p>
+ </li>
+
+</ul>
+
+     
+    
+
+
+
+
       </td>
     <td width="89" align="right" valign="top"><img src="images/rightcorner.gif" width="89" height="84"></td>
   </tr>
