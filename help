@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>portfolio</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v3.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+
+
+
+function popUpA() {
+props=window.open('https://doctortca.github.io/sites/emergncy/course.htm', 'poppage2', 'toolbars=0, scrollbars=0, location=0, statusbars=0, menubars=0, resizable=0, width=800, height=480');
+}
+
+
+
+ function popUpB() {
+props=window.open('https://doctortca.github.io/sites/officer/course.htm', 'poppage2', 'toolbars=0, scrollbars=0, location=0, statusbars=0, menubars=0, resizable=0, width=800, height=480');
+}
+
+
+ function popUpC() {
+props=window.open('https://doctortca.github.io/sites/medprime/index.htm', 'poppage2', 'toolbars=0, scrollbars=0, location=0, statusbars=0, menubars=0, resizable=0, width=640, height=640');
+}
+
+
+  
+//-->
+</script>
+</head>
+
+<body bgcolor="#666666" text="#FFFFFF" style="font-family: Verdana">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr bgcolor="#000000"> 
+    <td bgcolor="#000000" width="95" height="60">&nbsp;</td>
+    <td width="95" height="60">&nbsp;</td>
+    <td width="724" height="60"> 
+      <div align="right"><img src="images/portfolio_title.jpg" width="160" height="43" vspace="10"></div>
+    </td>
+    <td width="89" height="60">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td bgcolor="#000000" width="95" align="center" height="*" valign="top"> 
+      <div align="left">
+        <p align="center">&nbsp;</p>
+    
+        <p>&nbsp; </p>
+      </div>
+    </td>
+    <td width="95" align="left" valign="top"><img src="images/leftcorner.gif" width="89" height="84" align="top"></td>
+    <td width="724" valign="top" bgcolor="#666666" background="images/light.gif" tile="no" height="*"> 
+      <p>&nbsp;</p>
+    
+   
+<h3>Web-Based Training (Online Learning)</h3>
+
+   <p> The following courses will open in pop-up windows.  </P>
+    <p></p> <b>NOTE: </b> They have embedded videos, which were housed on a secure server not accessible to the public, so they won't play. You'll just see a placeholder for that part of each course.</p>
+</p>
+   
+
+  <h4> Full Web-Based Training Course Designed in Dreamweaver </h4>
+<ul>
+ 
+ <li>
+          <p><a href="javascript:popUpC()"style="color:#CCCCFF"> MedPrime </a>  </p>
+ </li>
+
+</ul>
+
+ <h4> Interface Design <h4>
+      
+    <h5> Course Shells (Wrap-Around Structures) Designed in FrontPage </h5>
+   
+  <ul>
+ <li>
+          <a href="javascript:popUpA()"style="color:#CCCCFF"> EmergencyClick </a>  
+</li>
+<li>
+          <p><a href="javascript:popUpB()"style="color:#CCCCFF"> OfficerNet </a>  </p>
+</li>
+   </ul>
+
+
+     
+    
+
+
+
+
+      </td>
+    <td width="89" align="right" valign="top"><img src="images/rightcorner.gif" width="89" height="84"></td>
+  </tr>
+</table>
+</body>
+</html>
