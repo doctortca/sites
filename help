@@ -73,19 +73,19 @@ props=window.open('https://doctortca.github.io/sites/medprime/index.htm', 'poppa
       <p>&nbsp;</p>
     
    
-<h3>Web-Based Training (Online Learning)</h3>
+<h3>Online Help</h3>
 
-   <p> The following courses will open in pop-up windows.  </P>
-    <p></p> <b>NOTE: </b> They have embedded videos, which were housed on a secure server not accessible to the public, so they won't play. You'll just see a placeholder for that part of each course.</p>
+   <p> The following are downloadable zipped (.ZIP) files. </P>
+    <p></p> <b>NOTE: </b> After clicking each link, check in your device's designated Downloads folder. </p>
 </p>
    
 
-  <h4> Full Web-Based Training Course Designed in Dreamweaver </h4>
+  <h4> Created using RoboHelp</h4>
 <ul>
  
  <li>
-          <p><a href="javascript:popUpC()"style="color:#CCCCFF"> MedPrime </a>  </p>
- </li>
+          <p><a href="https://doctortca.github.io/sites/Zips/FWMX.zip"style="color:#CCCCFF"> Adobe Fireworks Help </a>  </p>
+ <
 
 </ul>
 
